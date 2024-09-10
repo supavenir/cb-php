@@ -21,6 +21,4 @@ class CompteBancaire
     {
         return "$this->titulaire:$this->solde";
     }
-
-
 }

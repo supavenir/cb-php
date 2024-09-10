@@ -1,11 +1,7 @@
 <?php
-use App\models\CompteBancaire;
+use Pecee\SimpleRouter\SimpleRouter;
 
 require "./../vendor/autoload.php";
+require "./../src/config/router.php";
 
-$cb=new CompteBancaire("Toto");
-echo $cb;
-echo "<br>";
-
-$cb=new CompteBancaire("Toto",500);
-echo $cb;
+SimpleRouter::start();
