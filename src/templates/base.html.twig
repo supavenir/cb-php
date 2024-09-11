@@ -9,14 +9,20 @@
 </head>
 <body>
     <div class="my-container">
-        <header>
+        <header class="">
             {% block header %}
+                <div class="container mx-auto sm:px-6 lg:px-12">
+                    <div class="navbar bg-base-100 w-full">
+                        <a class="btn btn-ghost text-xl">CB App</a>
+                    </div>
+                </div>
             {% endblock %}
         </header>
-        <main>
+        <main class="">
+            <div class="container mx-auto sm:px-6 lg:px-12">
             {%  block body %}
-                <button class="btn btn-neutral">Neutral</button>
             {% endblock %}
+            </div>
         </main>
         <footer>
             {% block footer %}
