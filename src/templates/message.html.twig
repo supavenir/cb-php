@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{%  block body %}
+    {{ parent() }}
+    <div class="alert  shadow-lg">
+        {{ message | raw }}
+    </div>
+{% endblock %}
+
+{% block title %}
+    {{ parent() }}
+    : Message
+{% endblock %}
