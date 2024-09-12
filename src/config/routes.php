@@ -7,7 +7,11 @@ function getTwig(){
 }
 
 SimpleRouter::get('/', function() {
-    return 'Hello world';
+    return getTwig()->render('index.html.twig');
+});
+
+SimpleRouter::get('/newCompte', function() {
+    return getTwig()->render('compteForm.html.twig');
 });
 
 SimpleRouter::get('/message/{content}/{nb?}', function($content,$nb=1) {
