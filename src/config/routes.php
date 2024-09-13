@@ -5,20 +5,9 @@ function getTwig(){
     global $twig;
     return $twig;
 }
-
-SimpleRouter::get('/', function() {
-    return getTwig()->render('index.html.twig');
-});
-
-SimpleRouter::get('/newCompte', function() {
-    return getTwig()->render('compteForm.html.twig');
-});
-
-SimpleRouter::get('/message/{content}/{nb?}', function($content,$nb=1) {
-    $res="";
-    while($nb>0) {
-        $res .= "message : $content<br>";
-        $nb--;
-    }
-    return getTwig()->render('message.html.twig', ['message' => $res]);
+SimpleRouter::group(['namespace' => 'App\controllers'], function () {
+    SimpleRouter::get('/', 'CBController@index');
+    SimpleRouter::get('/newCompte', 'CBController@newCompteForm');
+    SimpleRouter::post('/newCompte', 'CBController@newCompteCreate');
+    SimpleRouter::get('/fermer', 'CBController@fermer');
 });

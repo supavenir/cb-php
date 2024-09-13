@@ -2,6 +2,7 @@
 
 require "./../vendor/autoload.php";
 
+session_start();
 $loader = new \Twig\Loader\FilesystemLoader('./../src/templates/');
 $twig = new \Twig\Environment($loader, []);
 

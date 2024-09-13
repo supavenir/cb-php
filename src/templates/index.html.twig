@@ -3,4 +3,9 @@
 <a href="/newCompte" class="btn btn-neutral">
     Créer un compte
 </a>
+    {% if message %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endif %}
 {% endblock %}

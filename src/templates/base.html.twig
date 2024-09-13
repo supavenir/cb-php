@@ -19,6 +19,11 @@
 <div class="my-container">
     <header>
         {% block header %}
+            <div class="navbar bg-base-100">
+                {% for menuItem in menu %}
+                    <a href="{{ menuItem.href }}" class="btn btn-ghost text-xl">{{ menuItem.label }}</a>
+                {% endfor %}
+            </div>
         {% endblock %}
     </header>
     <main>
