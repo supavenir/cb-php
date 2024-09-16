@@ -1,11 +1,4 @@
 {% extends "base.html.twig" %}
-{% block menu %}
-    {% for menuItem in menu %}
-        <a href="{{ menuItem.route }}" class="btn btn-ghost text-xl">
-            {{ menuItem.caption }}
-        </a>
-    {% endfor %}
-{% endblock %}
 
 {% block body %}
     {% if cb %}
