@@ -2,7 +2,8 @@
 
 namespace App\controllers;
 
-use App\models\CompteBancaire;
+use App\models\Utilisateur;
+use App\oldModels\CompteBancaire;
 use Pecee\SimpleRouter\SimpleRouter;
 
 class CBController extends BaseController
@@ -47,5 +48,6 @@ class CBController extends BaseController
         $params['menu']=$this->getMenu();
         return parent::render($template, $params);
     }
+
 
 }
