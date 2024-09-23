@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Model;
  * 
  * @property Collection|Compte[] $comptes
  * @property Collection|Famille[] $familles
+ * @property Collection|Partage[] $partages
  *
  * @package App\models
  */
@@ -39,5 +40,10 @@ class Utilisateur extends Model
 	public function familles()
 	{
 		return $this->hasMany(Famille::class, 'idUtilisateur');
+	}
+
+	public function partages()
+	{
+		return $this->hasMany(Partage::class, 'idUtilisateur');
 	}
 }

@@ -19,6 +19,7 @@ use Illuminate\Database\Eloquent\Model;
  * 
  * @property Utilisateur $utilisateur
  * @property Collection|Operation[] $operations
+ * @property Collection|Partage[] $partages
  *
  * @package App\models
  */
@@ -46,5 +47,10 @@ class Compte extends Model
 	public function operations()
 	{
 		return $this->hasMany(Operation::class, 'idCompte');
+	}
+
+	public function partages()
+	{
+		return $this->hasMany(Partage::class, 'idCompte');
 	}
 }
